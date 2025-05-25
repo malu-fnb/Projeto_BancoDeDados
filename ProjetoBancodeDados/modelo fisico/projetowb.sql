@@ -140,3 +140,11 @@ CREATE TABLE Historico (
     FOREIGN KEY (id_arquivo) REFERENCES Arquivo(id_arquivo),
     FOREIGN KEY (id_usuario_alteracao) REFERENCES Usuario(id_usuario)
 );
+
+CREATE TABLE Atividades_recentes (
+    id_arquivo INT,
+    ultima_versao DATE,
+    acesso ENUM('prioritário', 'não prioritário') DEFAULT 'não prioritário',
+    PRIMARY KEY (id_arquivo),
+    FOREIGN KEY (id_arquivo) REFERENCES arquivo(id)
+);
