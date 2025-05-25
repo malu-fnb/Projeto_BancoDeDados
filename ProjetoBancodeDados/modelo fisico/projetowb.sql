@@ -140,7 +140,7 @@ CREATE TABLE Historico (
     FOREIGN KEY (id_arquivo) REFERENCES Arquivo(id_arquivo),
     FOREIGN KEY (id_usuario_alteracao) REFERENCES Usuario(id_usuario)
 );
-
+-- parte 2 atividades
 CREATE TABLE Atividades_recentes (
     id_arquivo INT,
     ultima_versao DATE,

@@ -1,5 +1,8 @@
 USE projetowb;
--- Trigger SAFE_SECURITY  impeça que arquivos executáveis sejam inseridos no drive; 
+
+-- TRIGGERS: 
+
+--  SAFE_SECURITY  impeça que arquivos executáveis sejam inseridos no drive; 
 DELIMITER $$
 CREATE TRIGGER Safe_security
 BEFORE INSERT ON Arquivo
@@ -12,7 +15,7 @@ BEGIN
     END $$
     DELIMITER ;
 
-    -- Trigger Registrar_operacoes( Sempre que um arquivo tiver uma nova operação atualize a data da operação na tabela atividades_recentes; )
+    --  Registrar_operacoes( Sempre que um arquivo tiver uma nova operação atualize a data da operação na tabela atividades_recentes; )
     DELIMITER $$
     CREATE TRIGGER Registrar_operacao
     AFTER INSERT ON Operar
@@ -27,7 +30,7 @@ BEGIN
     END $$
     DELIMITER $$
     
-    -- Trigger Atualizar_Acesso ( Sempre que um usuário conseguir acesso a um novo arquivo, atualize os registros de arquivo dele também;)
+    --  Atualizar_Acesso ( Sempre que um usuário conseguir acesso a um novo arquivo, atualize os registros de arquivo dele também;)
     DELIMITER $$
     CREATE TRIGGER Atualizar_Acesso
     AFTER INSERT ON Compartilhamento
