@@ -202,28 +202,4 @@ Claro, Vinicius! Aqui está um **relato completo das dificuldades** que esse pro
 * Geração de massa de teste manual é **trabalhosa**.
 * Bugs podem surgir com dados nulos, formatos de data/hora errados ou id’s inexistentes.
 
----
-
-###  9. **Organização em Pastas e Arquivos**
-
-* Manter:
-
-  * `create.py`
-  * `update.py`
-  * `delete.py`
-  * `select.py`
-  * `triggers/`, `procedures/`, `views/`
-  * `database/connection.py`
-* Essa separação melhora a modularidade, mas aumenta a complexidade de manutenção do projeto.
-* Exige disciplina para **modularizar corretamente** cada operação.
-
----
-
-###  10. **Falta de Interface Final**
-
-* Sem um sistema web ou app com interface, **o usuário final não consegue usar o sistema**.
-* Difícil demonstrar o funcionamento do WebDrive sem uma interface de navegação ou visualização de arquivos e histórico.
-
----
-
 
