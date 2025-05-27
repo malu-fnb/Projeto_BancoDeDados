@@ -117,13 +117,9 @@ Atividades_recentes:
 ---
 
 
-Claro, Vinicius! Aqui está um **relato completo das dificuldades** que esse projeto de SQL do WebDrive pode apresentar, tanto do ponto de vista técnico quanto de lógica e organização:
-
----
-
 ##  Dificuldades do Projeto WebDrive (SQL e Integração com Python)
 
-###  1. **Modelagem Complexa do Banco de Dados**
+####  1. **Modelagem Complexa do Banco de Dados**
 
 * **Relacionamentos muitos-para-muitos**, como:
 
@@ -132,9 +128,9 @@ Claro, Vinicius! Aqui está um **relato completo das dificuldades** que esse pro
 * **Dependências fortes** entre tabelas, exigindo controle rigoroso de chaves estrangeiras.
 * Exemplo: não é possível inserir um `arquivo` sem que o `usuario` e a `instituicao` já existam.
 
----
 
-###  2. **Manutenção da Integridade Referencial**
+
+####  2. **Manutenção da Integridade Referencial**
 
 * **Problemas com ordem de inserção**:
 
@@ -144,9 +140,9 @@ Claro, Vinicius! Aqui está um **relato completo das dificuldades** que esse pro
   * Ao deletar, você precisa cuidar das tabelas filhas primeiro para evitar erros por FK.
   * Requer **cascateamento manual** ou definição de `ON DELETE CASCADE` corretamente.
 
----
 
-###  3. **Criação de Procedures, Triggers e Views**
+
+####  3. **Criação de Procedures, Triggers e Views**
 
 * Sintaxe do MySQL pode ser confusa:
 
@@ -155,9 +151,9 @@ Claro, Vinicius! Aqui está um **relato completo das dificuldades** que esse pro
 * Manter consistência entre procedures e o que está implementado em Python exige atenção.
 * **Testes manuais difíceis** para triggers e procedures que envolvem muitos dados conectados.
 
----
 
-###  4. **Gerenciamento de Versionamento e Histórico**
+
+####  4. **Gerenciamento de Versionamento e Histórico**
 
 * A tabela `historico` exige:
 
@@ -165,9 +161,9 @@ Claro, Vinicius! Aqui está um **relato completo das dificuldades** que esse pro
   * Lidar com conteúdos modificados, horários, e usuários responsáveis.
 * Difícil manter sincronização entre `arquivo`, `historico` e `opera`.
 
----
 
-###  5. **Compartilhamento e Comentários**
+
+####  5. **Compartilhamento e Comentários**
 
 * Lógica de compartilhamento exige:
 
@@ -175,16 +171,16 @@ Claro, Vinicius! Aqui está um **relato completo das dificuldades** que esse pro
   * Lidar com **acesso duplicado** ou tentativas de compartilhamento redundante.
 * Comentários dependem de dois `JOINs` para cruzar com `arquivo` e `usuário`.
 
----
 
-### 6. **Controle de Acesso e Permissões**
+
+#### 6. **Controle de Acesso e Permissões**
 
 * Atributo `Permissoes_acesso` no arquivo precisa ser bem definido (ex: leitura, escrita, admin).
 * Falta de padronização nesse campo pode causar **erros de segurança e lógica.**
 
----
 
-###  7. **Conectividade com Python**
+
+####  7. **Conectividade com Python**
 
 * Perigo de **SQL Injection**, já que os comandos estão montados com `f-strings`.
 
@@ -192,9 +188,9 @@ Claro, Vinicius! Aqui está um **relato completo das dificuldades** que esse pro
 * Manter a consistência dos dados entre código Python e banco é trabalhoso sem uma camada ORM (como SQLAlchemy).
 * Difícil testar o projeto sem uma interface amigável (GUI ou web), já que tudo está via terminal.
 
----
 
-###  8. **Carga de Dados e Testes**
+
+####  8. **Carga de Dados e Testes**
 
 * Testar todas as tabelas exige dados bem encadeados.
 
