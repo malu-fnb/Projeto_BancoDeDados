@@ -121,10 +121,7 @@ Atividades_recentes:
 
 ####  1. **Modelagem Complexa do Banco de Dados**
 
-* **Relacionamentos muitos-para-muitos**, como:
-
-  * `usuario_instituicao`
-  * `instituicao_plano`
+* **Relacionamentos muitos-para-muitos**
 * **Dependências fortes** entre tabelas, exigindo controle rigoroso de chaves estrangeiras.
 * Exemplo: não é possível inserir um `arquivo` sem que o `usuario` e a `instituicao` já existam.
 
